@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Olivia Van Zandt">
+    <meta name="description" content="Happy Day Dessert Factory Website">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kathleen Leber, M.D., P.A. Home</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Kathleen Leber, M.D., P.A.</h1>
+        <div class="contact">
+            <div class="phone-number">
+                <a href="tel:8133500700">(813)-350-0700</a>
+            </div>
+            <div class="tabs">
+                <nav>
+                    <a href="index.html">Home</a> |
+                    <a href="disease.html">Diseases</a> |
+                    <a href="services.html">Cosmetic Services</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Dermatology</h2>
+        <p class="new-patient">Accepting New Patients!</p>
+        <p>Providing medical, surgical, and cosmetic services to the greater Tampa Bay Area</p>
+    </div>
+
+       <!--code via https://www.w3schools.com/howto/howto_js_slideshow.asp-->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 2</div>
+          <img src="images/office.jpeg" style="width:100%" alt="View of the front of the office building">
+          <div class="text">Photo curtesty of Olivia Van Zandt</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 2</div>
+          <img src="images/derm.png" style="width:100%" alt="dermatology clip art">
+          <div class="text">Photo courtesy of: ____</div>
+        </div>
+      
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+      </div>
+    
+    <!--code via https://www.w3schools.com/howto/howto_js_slideshow.asp-->
+        <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1} 
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block"; 
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+    <div class="team">
+        <h3>Our Team</h3>
+        <p>Kathleen Leber, MD</p>
+        <p>Anna Weir, APRN</p>
+        <p>Kimberly Swirbul, LE</p>
+
+    </div>
+
+    <div class="location">
+        <h3>Location</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3524.776949548062!2d-82.49341472418224!3d27.939482415214243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c36e88ad5a39%3A0xa08c06f4859bb25!2sKathleen%20Leber%2C%20MD%20PA!5e0!3m2!1sen!2sus!4v1692581255534!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!--figured out through similar way with grid via https://www.w3schools.com/css/css_grid.asp and https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_display_grid-->
+    <div id="hours-container">
+        <h3 class="hour">Hours of Operation</h3><br>
+        <p class="hours-info"><strong>Monday: </strong>8:00am to 5:00pm</p><br>
+        <p class="hours-info"><strong>Tuesday: </strong>8:00am to 5:00pm</p><br>
+        <p class="hours-info"><strong>Wednesday: </strong>8:00am to 5:00pm</p><br>
+        <p class="hours-info"><strong>Thursday: </strong>8:00am to 5:00pm</p><br>
+    </div>
+
+</body>
+
+</html>
+
